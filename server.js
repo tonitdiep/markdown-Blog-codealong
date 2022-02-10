@@ -1,7 +1,7 @@
 const express = require('express')
 const app = express()
 
-app.length('/', (req, res) => {
+app.get('/', (req, res) => {
     res.send('Helloo World, from server.js')
 })
 app.listen(5000)
