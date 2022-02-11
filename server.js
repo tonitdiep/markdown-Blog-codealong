@@ -1,6 +1,9 @@
 const express = require('express')
 const app = express()
 
+app.set('view engine', 'ejs')
+//view engine convert ejs code to html
+//ejs -here we will be writing our views using ejs
 app.get('/', (req, res) => {
     res.send('Helloo World, from server.js')
 })
