@@ -1,5 +1,5 @@
 const express = require('express')
-const articleRouter = require('./routes/articles.js')
+const articleRouter = require('./routes/articles')
 const app = express()
 
 app.set('view engine', 'ejs')
@@ -11,7 +11,14 @@ app.get('/', (req, res) => {
     // res.send('Helloo World, from server.js')
         //try this one where we are rendering to the view files index.ejs w/ the render() method
         //render will pass it to the path we want from the diretory 
-    res.render('index')
+        const articles = [{
+            title: 'Test Article', 
+            crearedAt: Date.now(),
+            description: 'Test description'
+        }]
+    //    ^ set it to an array w/ one object inside ^
+        res.render('index', {articles: articles})
+        //passing articles to the view articles.js ^^
 })
 app.listen(5000)
 
