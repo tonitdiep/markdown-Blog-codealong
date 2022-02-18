@@ -11,6 +11,7 @@ app.get('/', (req, res) => {
     // res.send('Helloo World, from server.js')
         //try this one where we are rendering to the view files index.ejs w/ the render() method
         //render will pass it to the path we want from the diretory 
+    //index route/main route    
         const articles = [{
             title: 'Test Article', 
             createdAt: new Date(),
@@ -23,6 +24,7 @@ app.get('/', (req, res) => {
         }]
     //    ^ set it to an array w/ one object inside ^
         res.render('articles/index', {articles: articles})
+        //hooks up the view
         //passing articles to the view articles.js ^^
 })
 app.listen(5000)

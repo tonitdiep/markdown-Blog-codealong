@@ -9,5 +9,16 @@ monogoose is our database
 ejs are our different views
 nodenom automatically refresh our web page per change
 
-commands: 
-    -npm run devStart to run the server
+### console commands to run backend applicaiton: 
+    -'npm init -y' to set up server
+    -'npm i express mongoose ejs' to install dependencies 
+    -npm i --save-dev nodemon' to install dev dependencies
+        **** go to package.json file to create a simple script 
+            "scripts": {"devStart": "nodemon server.js"}
+    -'npm run devStart' to run the server
+
+## Set up Server in server.js
+const express = require('express')
+const app = express()
+app.listen(5000)   
+<!-- ^^^ set up localhost port to 5000 in localhost:5000 -->
