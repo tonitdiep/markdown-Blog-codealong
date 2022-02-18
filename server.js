@@ -13,12 +13,12 @@ app.get('/', (req, res) => {
         //render will pass it to the path we want from the diretory 
         const articles = [{
             title: 'Test Article', 
-            createdAt: Date.now(),
+            createdAt: new Date(),
             description: 'Test description'
         },
         {
             title: 'Test Article 2', 
-            createdAt: Date.now(),
+            createdAt: new Date(),
             description: 'Test description 2'
         }]
     //    ^ set it to an array w/ one object inside ^
