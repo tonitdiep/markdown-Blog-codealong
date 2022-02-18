@@ -22,7 +22,7 @@ app.get('/', (req, res) => {
             description: 'Test description 2'
         }]
     //    ^ set it to an array w/ one object inside ^
-        res.render('index', {articles: articles})
+        res.render('articles/index', {articles: articles})
         //passing articles to the view articles.js ^^
 })
 app.listen(5000)

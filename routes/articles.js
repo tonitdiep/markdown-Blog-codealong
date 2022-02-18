@@ -4,7 +4,7 @@ const router = express.Router()
 
 //export router from module.exports to do this from articles.js
     //need to tell application to use this router
-router.get('/', (req, res) => {
-    res.send('In articles')
+router.get('/new', (req, res) => {
+    res.send('articles/new')
 })
 module.exports = router
