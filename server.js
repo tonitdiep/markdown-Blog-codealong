@@ -4,7 +4,7 @@ const app = express()
 
 app.set('view engine', 'ejs')
 //view engine convert ejs code to html
-//ejs -here we will be writing our views using ejs
+//ejs -here we will be writing all our views using ejs
 
 app.use('/articles', articleRouter)
 app.get('/', (req, res) => {

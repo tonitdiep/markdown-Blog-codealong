@@ -5,6 +5,10 @@ const router = express.Router()
 //export router from module.exports to do this from articles.js
     //need to tell application to use this router
 router.get('/new', (req, res) => {
-    res.send('articles/new')
+    res.render('articles/new')
+})
+
+router.post('/', (req, res) => {
+    
 })
 module.exports = router
