@@ -22,3 +22,7 @@ const express = require('express')
 const app = express()
 app.listen(5000)   
 <!-- ^^^ set up localhost port to 5000 in localhost:5000 -->
+### learning bootstrap:
+- class="form-control"
+"The .form-group class is the easiest way to add some structure to forms. It provides a flexible class that encourages proper grouping of labels, controls, optional help text, and form validation messaging. By default it only applies margin-bottom , but it picks up additional styles in .form-inline as needed." (https://getbootstrap.com/docs/4.0/components/forms/)
+
