@@ -1,4 +1,5 @@
 const express = require('express')
+const Article = require('./../models/article')
 const router = express.Router()
 // give us a router to use to vreate views to render something from router 
 
@@ -8,8 +9,15 @@ router.get('/new', (req, res) => {
     res.render('articles/new')
 })
 
-router.post('/', (req, res) => {
-    
+//async function using async and await 
+router.post('/', async (req, res) => {
+    const article = new Article({
+        //we neeed to tell Express how to access article
+       title: req.body.title,
+       description: req.body.description,
+       markdown: req.body.markdown
+    })
+      await article.save() 
 })
 
 // ^^want to use this post method to save article to our database

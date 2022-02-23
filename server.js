@@ -11,6 +11,8 @@ mongoose.connect('mongodb://localhost/blog',
 //ejs -here we will be writing all our views using ejs
 
 app.use('/articles', articleRouter)
+app.use(express.urlencoded({ extended: false }))
+
 app.get('/', (req, res) => {
     // res.send('Helloo World, from server.js')
         //try this one where we are rendering to the view files index.ejs w/ the render() method
