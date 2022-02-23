@@ -11,4 +11,7 @@ router.get('/new', (req, res) => {
 router.post('/', (req, res) => {
     
 })
+
+// ^^want to use this post method to save article to our database
+//now need to hook up our databse in our application with requiring 'mongoose'
 module.exports = router
