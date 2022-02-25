@@ -6,11 +6,11 @@ const app = express()
 mongoose.connect('mongodb://localhost/blog',  
     { useNewUrlParser: true, useUnifiedTopology: true })
 
-    app.set('view engine', 'ejs')
+app.set('view engine', 'ejs')
 //view engine convert ejs code to html
 //ejs -here we will be writing all our views using ejs
 
-app.use('/articles', articleRouter)
+
 app.use(express.urlencoded({ extended: false }))
 
 app.get('/', (req, res) => {
@@ -33,6 +33,9 @@ app.get('/', (req, res) => {
         //hooks up the view
         //passing articles to the view articles.js ^^
 })
+
+app.use('/articles', articleRouter)
+
 app.listen(5000)
 
 /*
