@@ -8,6 +8,10 @@ express is to create our server
 mongoose is our database 
 ejs are our different views
 nodenom automatically refresh our web page per change
+mongoDB is actually a document database aside from being NoSQL or not only SQL, mondoDB can use SQL
+    -Non-Relational DB but we can store relational data in mongoDB just stored differently than in reatlionsal database
+    -JSON under the hood with JavaScript Object Notation
+    -
 
 ### console commands to run backend applicaiton: 
     -'npm init -y' to set up server

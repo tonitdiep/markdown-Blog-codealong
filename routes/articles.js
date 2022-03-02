@@ -1,6 +1,7 @@
 const express = require('express')
 const Article = require('./../models/article')
 const router = express.Router()
+
 // give us a router to use to vreate views to render something from router 
 
 //export router from module.exports to do this from articles.js
@@ -29,7 +30,7 @@ router.post('/', async (req, res) => {
         article = await article.save() 
         
         res.redirect(`/articles/${article.id}`)
-    } catch (e) {
+    } catch(e) {
         console.log(e)
         res.render('articles/new', { article: article })
         

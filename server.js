@@ -1,7 +1,9 @@
 const express = require('express')
+const bodyParser = require('body-parser')
 const mongoose = require('mongoose')
 const articleRouter = require('./routes/articles')
 const app = express()
+
 
 mongoose.connect('mongodb://localhost/blog',  
     { useNewUrlParser: true, useUnifiedTopology: true })
@@ -11,7 +13,8 @@ app.set('view engine', 'ejs')
 //ejs -here we will be writing all our views using ejs
 
 
-app.use(express.urlencoded({ extended: false }))
+app.use(express.urlencoded({ extended: true }))
+// app.use(bodyParser.urlencoded({ extended: true }))
 
 app.get('/', (req, res) => {
     // res.send('Helloo World, from server.js')
