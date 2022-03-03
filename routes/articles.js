@@ -19,19 +19,20 @@ router.get('/:id', async (req, res) => {
 
 })
 //async function using async and await 
-router.post('/', async (req, res) => {
+router.post('/', async (req, res, next) => {
     let article = new Article({
         //we neeed to tell Express how to access article
        title: req.body.title,
        description: req.body.description,
        markdown: req.body.markdown
     })
+    next()
     try{
         article = await article.save() 
         
         res.redirect(`/articles/${article.id}`)
     } catch(e) {
-        console.log(e)
+        window.alert('testing lin34', e)
         res.render('articles/new', { article: article })
         
     }

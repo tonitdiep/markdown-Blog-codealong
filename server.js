@@ -4,17 +4,18 @@ const mongoose = require('mongoose')
 const articleRouter = require('./routes/articles')
 const app = express()
 
-
-mongoose.connect('mongodb://localhost/blog',  
-    { useNewUrlParser: true, useUnifiedTopology: true })
+//connecting our database
+// mongoose.connect('mongodb://localhost/blog',  
+    // { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect('mongodb://127.0.0.1/blog')
 
 app.set('view engine', 'ejs')
 //view engine convert ejs code to html
 //ejs -here we will be writing all our views using ejs
 
 
-app.use(express.urlencoded({ extended: true }))
-// app.use(bodyParser.urlencoded({ extended: true }))
+// app.use(express.urlencoded({ extended: false }))
+app.use(bodyParser.urlencoded({ extended: false }))
 
 app.get('/', (req, res) => {
     // res.send('Helloo World, from server.js')
